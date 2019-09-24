@@ -389,7 +389,7 @@ a:hover, a:active {
 
 .portfolio-content:hover .entry-content {
     visibility: visible;
-    opacity: 1;
+    opacity: 0.5;
 }
 
 .portfolio-content h3 {
