@@ -594,19 +594,19 @@ a:hover, a:active {
 
 @media screen and (min-width: 576px) {
     .single-portfolio {
-        padding-top: 45px;
+        padding-top: 15px;
     }
 }
 
 @media screen and (min-width: 992px) {
     .single-portfolio {
-        padding-top: 90px;
+        padding-top: 15px;
     }
 }
 
 @media screen and (min-width: 1200px) {
     .single-portfolio {
-        padding-top: 115px;
+        padding-top: 15px;
     }
 }
 
