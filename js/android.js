@@ -1,9 +1,13 @@
-	var showAndroidToast = function(toast) {
+window.onerror = function(error) {
+	alert(error); // Fire when errors occur. Just a test, not always do this.
+};
+
+var showAndroidToast = function(toast) {
 		if (isAndroidDefined()) {
 			Android.showToast(toast);
 		} else {
 	    try {
-	    	webkit.messageHandlers.swiftHandler.showToast(toast);
+	    	webkit.messageHandlers.showToast.postMessage("Hello from javascript");
 	    } catch(err) {
 				window.alert("Sorry, no Android or Swift available. Native message will only work when called from WebView inside locosonic app.\n\n called: Android.showToast()");
 	    }
@@ -16,10 +20,10 @@
 			Android.showToast("Gallery sound started");
 		} else {
 			try {
-	    	webkit.messageHandlers.swiftHandler.playSound();
-				webkit.messageHandlers.swiftHandler.showToast("Gallery sound started");
-	    } catch(err) {
-				window.alert("Sorry, no Android or Swift available. Native message will only work when called from WebView inside locosonic app.\n\n called: Android.showToast()");
+	    	webkit.messageHandlers.playSound.postMessage("");
+				webkit.messageHandlers.showToast.postMessage("Gallery sound started");
+			} catch(err) {
+				window.alert(err);
 	    }
 		}
 	};
