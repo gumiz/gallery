@@ -2,7 +2,11 @@
 		if (isAndroidDefined()) {
 			Android.showToast(toast);
 		} else {
-			window.alert("Sorry, no Android available. Native message will only work when called from WebView inside locosonic app.\n\n called: Android.showToast()");
+	    try {
+	    	webkit.messageHandlers.swiftHandler.showToast(toast);
+	    } catch(err) {
+				window.alert("Sorry, no Android or Swift available. Native message will only work when called from WebView inside locosonic app.\n\n called: Android.showToast()");
+	    }
 		}
 	};
 
@@ -11,14 +15,18 @@
 			Android.playSound();
 			Android.showToast("Gallery sound started");
 		} else {
-			window.alert("Sorry, no Android available. Native message will only work when called from WebView inside locosonic app.\n\n called: Android.playSound()");
+			try {
+	    	webkit.messageHandlers.swiftHandler.playSound();
+				webkit.messageHandlers.swiftHandler.showToast("Gallery sound started");
+	    } catch(err) {
+				window.alert("Sorry, no Android or Swift available. Native message will only work when called from WebView inside locosonic app.\n\n called: Android.showToast()");
+	    }
 		}
 	};
 
 	var playSoundDelayed = function() {
 		setTimeout(function(){
-				playSound(); 
-				Android.showToast("Automatic gallery sound started");
+				playSound();
 		}, 3000);
 	}
 
@@ -29,4 +37,4 @@
 		catch(err) {
 			return false;
 		}
-	} 
+	}
