@@ -1,4 +1,6 @@
 {
-"name": "locosonic",
-"mandatoryVersionCode": 35
+  @id: "1"
+  @type: "MandatoryUpdate"
+  name: "Locosonic",
+  mandatoryVersionCode: 0
 }
