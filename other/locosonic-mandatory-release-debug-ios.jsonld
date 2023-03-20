@@ -1,6 +1,6 @@
 {
   "@id": "1",
   "@type": "MandatoryUpdate",
-  name: "Locosonic",
-  mandatoryVersionCode: 0
+  "name": "Locosonic",
+  "mandatoryVersionCode": 0
 }
