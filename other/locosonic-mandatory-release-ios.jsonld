@@ -2,5 +2,5 @@
   "@id": "1",
   "@type": "MandatoryUpdate",
   "name": "Locosonic",
-  "mandatoryVersionCode": 42
+  "mandatoryVersionCode": 43
 }
